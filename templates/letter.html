@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<style>
+  @page { size: A4; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: "Times New Roman", Georgia, serif;
+    font-size: 12pt;
+    line-height: 1.5;
+    color: #000;
+  }
+  .date { margin-bottom: 36px; }
+  .recipient { margin-bottom: 36px; }
+  .recipient .name { }
+  .greeting { margin-bottom: 18px; }
+  p { margin: 0 0 14px 0; text-indent: 24px; }
+  .signoff { margin-top: 36px; }
+  .signoff .company { margin-top: 28px; }
+</style>
+</head>
+<body>
+  <!--
+    Editable letter template. Placeholders in {{double braces}} are filled per deal:
+      {{date}}       - generation date (DD/MM/YYYY)
+      {{fullname}}   - contact first + last name
+      {{address}}    - street address
+      {{cityLine}}   - SUBURB, STATE POSTCODE
+      {{firstname}}  - greeting name
+      {{companyName}}- from COMPANY_NAME env
+    Also available: {{lastname}} {{city}} {{state}} {{zip}} {{country}}
+                    {{dealName}} {{amount}} {{closeDate}}
+  -->
+  <div class="date">{{date}}</div>
+
+  <div class="recipient">
+    <div class="name">{{fullname}}</div>
+    <div>{{address}}</div>
+    <div>{{cityLine}}</div>
+  </div>
+
+  <div class="greeting">Dear {{firstname}},</div>
+
+  <p>We hope you enjoy the guide we have put together to explain how to make your money work smarter. The truth is &hellip; anyone can be rich and this book tells you how.</p>
+
+  <p>Our team will also be in touch with you over the next few weeks to answer any questions you may have and explain in more detail how we can tailor these strategies to your unique situation.</p>
+
+  <p>In the meantime please visit our website www.iqcapital.com.au and see what our happy clients have to say about us.</p>
+
+  <div class="signoff">
+    <div>With Thanks</div>
+    <div class="company">The {{companyName}} Team</div>
+  </div>
+</body>
+</html>
